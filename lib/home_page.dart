@@ -29,9 +29,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 22, 7, 54).withOpacity(0.90),
+      backgroundColor: const Color(0xff221935),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 22, 7, 54).withOpacity(0.90),
+        backgroundColor: const Color(0xff221935),
         title: const Center(
           child: Text(
             'BMI CALCULATOR',
@@ -142,19 +142,23 @@ class _HomePageState extends State<HomePage> {
                       '60',
                       style: TextStyle(color: Colors.white, fontSize: 30),
                     ),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Icon(
-                          Icons.remove,
-                          color: Colors.white,
-                          size: 40,
-                        ),
-                        Icon(
-                          Icons.add,
-                          color: Colors.white,
-                          size: 40,
-                        ),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.remove,
+                              color: Colors.white,
+                              size: 40,
+                            )),
+                        IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.add,
+                              color: Colors.white,
+                              size: 40,
+                            )),
                       ],
                     )
                   ],
@@ -201,19 +205,22 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 40,
-            decoration: BoxDecoration(
-              color: Colors.pink,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: const Center(
-              child: Text(
-                'CALCULATOR',
-                style: TextStyle(
-                  fontSize: 25,
-                  color: Colors.white,
+          InkWell(
+            onTap: () {},
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: 40,
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Center(
+                child: Text(
+                  'CALCULATOR',
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
